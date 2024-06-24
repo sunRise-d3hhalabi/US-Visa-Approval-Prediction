@@ -1,11 +1,14 @@
 import os
 from datetime import date
+from dotenv import load_dotenv
 
-DATABASE_NAME = "DB_US_VISA"
+load_dotenv()
 
-COLLECTION_NAME = "COLLECTION_US_VISA"
+DATABASE_NAME = os.getenv("DATABASE_NAME")
 
-MONGODB_URL_KEY = "MONGODB_URL"
+COLLECTION_NAME = os.getenv("COLLECTION_NAME")
+
+MONGODB_URL_KEY = os.getenv("MONGODB_URL")
 
 PIPELINE_NAME: str = "usvisa"
 ARTIFACT_DIR: str = "artifact"

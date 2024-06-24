@@ -6,10 +6,6 @@ import sys
 from typing import Optional
 import numpy as np
 
-from us_visa.logger import logging
-
-
-
 class USvisaData:
     """
     This class help to export entire mongo db record as pandas dataframe
@@ -32,10 +28,8 @@ class USvisaData:
             """
             if database_name is None:
                 collection = self.mongo_client.database[collection_name]
-                logging.info("database_name is None")
             else:
                 collection = self.mongo_client[database_name][collection_name]
-                logging.info("database_name is " + str(database_namel))
 
             df = pd.DataFrame(list(collection.find()))
             if "_id" in df.columns.to_list():
