@@ -23,3 +23,10 @@ class DataIngestionConfig:
     testing_file_path: str = os.path.join(data_ingestion_dir, constants.DATA_INGESTION_INGESTED_DIR, constants.TEST_FILE_NAME)
     train_test_split_ratio: float = constants.DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO
     collection_name:str = constants.DATA_INGESTION_COLLECTION_NAME
+
+@dataclass
+class DataValidationConfig:
+    pass
+    data_validation_dir: str = os.path.join(training_pipeline_config.artifact_dir, constants.DATA_VALIDATION_DIR_NAME)
+    drift_report_file_path: str = os.path.join(data_validation_dir, constants.DATA_VALIDATION_DRIFT_REPORT_DIR,
+                                               constants.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME)
