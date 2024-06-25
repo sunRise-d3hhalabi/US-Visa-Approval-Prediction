@@ -48,3 +48,19 @@ class ModelTrainerConfig:
     trained_model_file_path: str = os.path.join(model_trainer_dir, constants.MODEL_TRAINER_TRAINED_MODEL_DIR, constants.MODEL_FILE_NAME)
     expected_accuracy: float = constants.MODEL_TRAINER_EXPECTED_SCORE
     model_config_file_path: str = constants.MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
+
+@dataclass
+class ModelEvaluationConfig:
+    changed_threshold_score: float = constants.MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
+    bucket_name: str = constants.MODEL_BUCKET_NAME
+    s3_model_key_path: str = constants.MODEL_FILE_NAME
+
+@dataclass
+class ModelPusherConfig:
+    bucket_name: str = constants.MODEL_BUCKET_NAME
+    s3_model_key_path: str = constants.MODEL_FILE_NAME
+
+@dataclass
+class USvisaPredictorConfig:
+    model_file_path: str = constants.MODEL_FILE_NAME
+    model_bucket_name: str = constants.MODEL_BUCKET_NAME    
