@@ -2,6 +2,8 @@
 
 This project built and deployed a machine learning model for US visa approval prediction using MLOps and CI/CD. The MLOps pipeline addressed data quality by handling data imbalance and monitoring for data drift throughout the process. It loaded data from MongoDB, performed data cleaning and feature engineering, trained various models, and deployed the best-performing one to AWS S3. The project leveraged GitHub for version control, GitHub Actions, and AWS ECR for CI/CD automation, and deployed the final Fast web application to AWS EC2. This approach ensured a streamlined, automated, and data-quality-focused machine learning lifecycle.
 
+Tools: Python 3.8, GitHub, scikit-learn, imblearn, evidently, Fast API, MongoDB, AWS EC2, AWS S3, GitHub Actions, and AWS ECR.
+
 ## Git commands
 
 ```bash
